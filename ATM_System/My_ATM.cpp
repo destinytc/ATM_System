@@ -15,12 +15,12 @@ public:
 		cout << "Balance: $" << balance << "\n";
 		return balance;
 	}
-	void widthdrawl() {  //method to widthdrawl funds from account
+	void withdrawl() {  //method to withdrawl funds from account
 		int amountOut;
-		cout << "Enter the amount you would like to widthdrawl: \n";
+		cout << "Enter the amount you would like to withdrawl: \n";
 		cin >> amountOut;
 		while (amountOut > balance) {
-			cout << "The widthdrawl amount exceeds funds available! Please try again\n";
+			cout << "The withdrawl amount exceeds funds available! Please try again\n";
 			cin >> amountOut;
 		}
 
@@ -50,7 +50,7 @@ int main() {
 
 	while (!sessionDone) {
 		cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
-		cout << "Select a Transaction:\n\n1: Account Balance\n2: Deposit Funds\n3: Widthdrawl Funds\n\n";
+		cout << "Select a Transaction:\n\n1: Account Balance\n2: Deposit Funds\n3: Withdrawl Funds\n\n";
 		cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
 		cin >> transaction;
 
@@ -63,7 +63,7 @@ int main() {
 				myAtm.deposit();
 				break;
 			case (3):
-				myAtm.widthdrawl();
+				myAtm.withdrawl();
 				break;
 		}
 
